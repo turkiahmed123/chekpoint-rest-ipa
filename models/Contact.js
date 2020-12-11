@@ -10,6 +10,7 @@ const contactSchema = new schema({
 
   email: {
     type: String,
+    required: true
   },
 
   phone: String,

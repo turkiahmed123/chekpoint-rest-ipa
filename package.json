@@ -4,12 +4,14 @@
   "description": "mern app",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "front": "cd client && npm start",
+    "back": "nodemon server.js",
+    "dev": "concurrently \"npm run front\" \"npm run back\""
   },
   "author": "ahmed",
   "license": "ISC",
   "dependencies": {
+    "concurrently": "^5.3.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.0"
   },
